@@ -91,3 +91,20 @@ None of the id's for the users match the id's for current bookings which slowed 
 To run: npm --prefix apps/frontend run dev
 
 Things I didn't have time to do would be to create a new booking. 
+
+## Task 4
+
+### Node client
+
+For running the tests: 
+
+npx jest apps/api_client/src/api.spec.ts --config apps/api_client/jest.config.ts
+
+Given more time, I'd work on the responses some more to get back some more useful data like the http codes. 200, 404 etc.
+
+Ran out of time but what needs to be discussed further is:
+
+Are those tests fit for purpose?
+They just assert that 502 is null, they don't check the status code is actually a 502, yet the test specifically calls it a 502? Currently anything that isn't a 200 will act the same. 
+
+If 502s are temporary, do we want to use axios retry? How then do we split out the way the code is handled? Anything with a status code bigger than 500 is an automatic retry and anything below is log out and throw an error? All this should be discussed based on business requirements. 
