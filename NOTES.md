@@ -52,3 +52,30 @@ This would allow multiple comments per booking or user and provide a much more f
 ### Additional constraints
 
 I would change the use of varchar to date/timestamp. Using dates are a varchar can cause numerous issues with sorted, as they will not behave in a way humans would expect. There is no guarantee that the earliest dates will be shown first if you sort on a varchars with a formats of '06-20-2025' for example.
+
+## Task 2
+
+### Agentic coding
+
+The world is only talking about AI at the moment and it dominates the conversation in most place, but specifically our world software development. 
+
+AI has been widely adopted to be used for debugging, code completion and documentation, through the use of Co-pilot or dedicated IDEs such as Cursor, which offer all the latest models but also their own models. 
+
+Beyond the wider adoption, some are using AI to run agentic coding - the full cycle of development from ticket ingestion to implementation to code review. This fully autonomous pipeline has undoubtedly raised a lot of questions and two I will talk about here: Cost and Quality. 
+
+For reference, I will be using Claude and Anthropic as the example.  
+
+Cost has been the real limitation for developers, either through burning tokens or through literal £s spent using the API. This has caused development to adapt and think carefully about how they approach their workflows. Many have resorted to a understand -> plan -> approve -> write -> verify (or some variation of these words.)
+
+In short, they use the more expensive models to understand the current code, the ask of the ticket and the potential solutions and then produce a plan which is debated and approved by humans. Once approved, the agents are carrying out clearly written plans and so the cheaper models such as Sonnet or Haiku, are able to execute the plan and produce the code.
+
+This model, including a mix of human and AI reviewing, allows full ownership of the code to still sit with humans and reduces costs to allow for more work per subscription. 
+
+It's a desired blend because it also helps to address the other issue: Quality.
+
+Quality is the single biggest problem with agentic coding today. Without an excellent code base to model itself on, the agents will not produce high-quality work. They seldom self-correct by looking at new and fresh documentation and they often will expand scope-creep in the name 'coding best practice', turning your one-line bug fix into a 4 page refactor. 
+
+By having regular intervals with the plans and the reviews, it keeps humans in control of the direction and allows for potential hallucinations/scope creep to be caught early on. Further to that, any skills that are designed to write plans and carry out code, can be regularly update by any issues found at the human review stages. Over time, the agents should behave more in line with your desired coding style and quality. 
+
+Agentic coding is still in its infancy and the world is right to be cautious of its limitations. The above approach, at this time, addresses both the major concerns with working with AI and is as close to autonomous as developers can get, without compromising quality code - something we all care a lot about. 
+
