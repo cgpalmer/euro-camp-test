@@ -79,3 +79,15 @@ By having regular intervals with the plans and the reviews, it keeps humans in c
 
 Agentic coding is still in its infancy and the world is right to be cautious of its limitations. The above approach, at this time, addresses both the major concerns with working with AI and is as close to autonomous as developers can get, without compromising quality code - something we all care a lot about. 
 
+## Task 3
+
+### Using Next.JS - Frontend task
+
+Conflicts again with legacy typeorm - ran with legacy-deps flag to get it working.
+Put the NX app in the apps folder with everything it needs to run in isolation - avoids the above issues.
+
+None of the id's for the users match the id's for current bookings which slowed me down. I build a new booking in DBeaver to get by. 
+
+To run: npm --prefix apps/frontend run dev
+
+Things I didn't have time to do would be to create a new booking. 
